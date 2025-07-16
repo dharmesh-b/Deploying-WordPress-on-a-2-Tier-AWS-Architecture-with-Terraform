@@ -31,7 +31,7 @@ variable "ami" {
 
 variable "availability_zone" {
   type    = list(string)
-  default = ["ca-central-1a", "ca-central-1b", "ca-central-1d"]
+  default = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
 }
 
 variable "vpc_cidr" {
@@ -59,4 +59,10 @@ variable "private_key_location" {
 variable "mount_directory" {
   type    = string
   default = "/var/www/html"
+}
+
+variable "region" {
+  type    = string
+  default = "ap-south-1"  # Or your preferred default region
+  description = "The AWS region to deploy resources to."
 }
